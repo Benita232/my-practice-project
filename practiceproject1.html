@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to left, #72c2ff, #0061a8);
+            color: white;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .weather-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .current-weather {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .current-temp {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin: 10px 0;
+        }
+        
+        .current-range {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .forecast-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .forecast-item:last-child {
+            border-bottom: none;
+        }
+
+        .forecast-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+        .forecast-day {
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .forecast-range {
+            font-size: 1.1rem;
+        }
+        
+        .change-city {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        
+        .change-city:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .credits {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .weather-icon {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-card">
+        <div class="current-weather">
+            <h1>Currently 21° ☀ in Tokyo</h1>
+            <div class="current-range">13° / 23°</div>
+        </div>
+        
+        <div class="forecast">
+            <div class="forecast-item">
+                <span class="forecast-day"><span class="weather-icon">⛅</span> Tomorrow</span>
+                <span class="forecast-range">10° / 22°</span>
+            </div>
+            <div class="forecast-item">
+                <span class="forecast-day"><span class="weather-icon">🌧</span> Saturday</span>
+                <span class="forecast-range">15° / 17°</span>
+            </div>
+            <div class="forecast-item">
+                <span class="forecast-day"><span class="weather-icon">🔥</span> Sunday</span>
+                <span class="forecast-range">25° / 28°</span>
+            </div>
+        </div>
+        
+        <a href="#" class="change-city">Change city</a>
+        
+        <div class="credits">
+            <strong>Coded by Benita Nnabuife</strong>
+        </div>
+    </div>
+</body>
+</html>
+
+

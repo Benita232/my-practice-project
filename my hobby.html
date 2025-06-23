@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MY HOBBY </title>
+    <style>
+        body {
+            background: linear-gradient(to right, plum,  purple);
+            justify-content: center;
+        }
+        .container {
+           max-width: 600px;
+
+            margin: 0 auto;
+            padding: 10px 15px;
+            font-family: Arial, sans-serif;
+            color: #333;
+           width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+        h1 {
+            color: #4a148c;
+            text-align: center;
+        }
+        h2  {
+             border-width: 1px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .ballet-intro-image {
+            
+            border-radius: 10px;
+            transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+            
+        }
+        .ballet-intro-image:hover {
+            filter: contrast(50%);
+            transform: scale(1.05);
+            
+        }
+        .grid-images {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1.2fr 1.2fr;
+            grid-gap: 15px;
+            margin-top: 20px;
+            
+            
+        }
+
+        
+        .grid img {
+            width: 300px;
+        }
+        .grid-img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        .learn {
+            background-color: #4a148c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+        .learn:hover {
+            opacity: 0.8;
+            background-color: #333;
+        }
+
+        .link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            
+            color:  #4a148c;
+            text-decoration: none;
+            
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        .theme {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px; ;
+        }
+        .theme:hover {
+            opacity: 0.8;
+            background-color: #333;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color:  #666;
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+  <button class="theme change">dark theme</button>
+<div class="container">
+   <h1>what is Ballet?</h1> 
+   <h2><em>My favourite type of dance 💃 </em></h2> 
+  <a href="https://www.ballet.org.uk/" target="_blank">
+    <img src="https://focusdancecenter.com/wp-content/uploads/2022/04/historyofballett-1.jpg" alt="Ballet History"
+    class="ballet-intro-image"
+    />
+</a>
+     
+   
+    <div class="grid-images">
+        <img src= "https://images.squarespace-cdn.com/content/v1/5e9dbb8efe4e741430661dbf/ebe5ce2c-5cb9-4ac0-ba56-26bf63689907/Ballet_58_05192022_0430.jpeg"/>
+        <img src="https://www.shutterstock.com/image-photo/young-graceful-ballerina-dressed-pointe-600nw-2188127775.jpg" />
+        <img src="https://wallpapers.com/images/hd/ballet-dancer-in-open-space-9tg7dvq8loqucn2s.jpg" alt="Ballet Dancer in Open Space"/>
+        <img src="https://img.freepik.com/premium-photo/elegant-ballet-dancer-graceful-pose-octane-rend_1022456-93353.jpg" alt="Elegant Ballet Dancer"/>
+
+    </div>
+ 
+ 
+    <p>Ballet is a type of performance dance that originated in the Italian Renaissance courts of the 15th century and later developed
+         into a concert dance form in France and Russia. It is known for its grace, precision, and formalized steps and gestures.</p>
+    <p>Ballet is characterized by its use of pointed shoes, intricate footwork, and the ability to convey emotion and storytelling through
+         movement.  It often involves a combination of classical music and elaborate costumes, with performances typically taking place on a stage.</p>
+    <p> Dancers train for years to master the techniques required, including flexibility, strength, and balance.</p>
+    <p>There are various styles of ballet, including classical ballet, contemporary ballet, and neoclassical ballet, each with its own unique techniques and aesthetics.
+         Ballet is not only a form of entertainment but also a rigorous art form that requires years of training and dedication.</p>
+
+         <a href="https://www.ballet.org.uk/" target="_blank" class="link">Learn more about Ballet</a>
+         <button class="learn" >learn ballet</button>
+
+</div>
+<footer>Coded by Benita Nnabuife</footer> 
+
+<script>
+    const themeButton = document.querySelector('.theme');
+    const body = document.body;
+
+    themeButton.addEventListener('click', () => {
+        body.classList.toggle('dark-theme');
+        if (body.classList.contains('dark-theme')) {
+            body.style.background = 'linear-gradient(to right, #333, #555)';
+            themeButton.textContent = 'light theme';
+        } else {
+            body.style.background = 'linear-gradient(to right, plum, purple)';
+            themeButton.textContent = 'dark theme';
+        }
+    });
+    </script>
+</body>
+</html>
